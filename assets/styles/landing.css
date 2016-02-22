@@ -1,0 +1,432 @@
+/*
+ 
+ - This file is a part of Muvily Extension for Google Chrome (http://allrightamin.xyz/muvily)
+ - 
+ - Muvily is free software: you can redistribute it and/or modify it under the terms of 
+ - the MIT License as published by the Free Software Foundation.
+ - 
+ - The MIT License (MIT)
+ - 
+ - Copyright (c) 2016 Amin Mohamed Ajani
+ - 
+ - Permission is hereby granted, free of charge, to any person obtaining a copy
+ - of this software and associated documentation files (the "Software"), to deal
+ - in the Software without restriction, including without limitation the rights
+ - to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ - copies of the Software, and to permit persons to whom the Software is
+ - furnished to do so, subject to the following conditions:
+ - 
+ - The above copyright notice and this permission notice shall be included in all
+ - copies or substantial portions of the Software.
+ - 
+ - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ - IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ - FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ - AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ - LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ - OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+
+*/
+
+
+/*Importing the fonts*/
+@font-face{
+    font-family:"Open Sans";
+    font-style:"normal";
+    font-weight:300;
+    src:url('/assets/fonts/open-sans-v13-latin-regular.woff2');
+}
+@font-face{
+    font-family:"Open Sans";
+    font-style:"normal";
+    font-weight:300;
+    src:url('/assets/fonts/open-sans-v13-latin-300.woff2');
+}
+@font-face{
+    font-family:"Roboto";
+    font-style:"normal";
+    font-weight:400;
+    src:url('/assets/fonts/roboto-v15-latin-regular.woff2');
+}
+@font-face{
+    font-family:"Roboto";
+    font-style:"normal";
+    font-weight:300;
+    src:url('/assets/fonts/roboto-v15-latin-300.woff2');
+}
+
+
+
+
+/*Beautifying ugly scroll bars*/
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+   background-color: #404040;
+}
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #d8d85d;
+}
+body{
+    
+    min-width:400px;
+    height:580px;
+    background-color:#424242;
+    
+    font-family: 'Open Sans', 'Arial',sans-serif;
+    
+}
+
+
+
+h4{
+    font-family: "Roboto";
+}
+
+.imdb,
+.rotten-tomatoes{
+/*display: none;*/
+}
+
+.active{
+    
+    /*display:block;*/
+    
+}
+
+
+.title-wrapper{
+background-color: #424242;
+color:silver;
+padding-bottom:4px;
+}
+.title-wrapper #Title{
+    font-size: 32px;
+    color:#fff;
+    
+}
+.title-wrapper .subtext{
+    color:silver;
+    
+}
+
+#Plot{
+    font-family: "Roboto","Verdana", serif;
+    font-weight: 300;
+    font-size: 14px;
+    background-color: #d8d85d;
+    margin-top:4px;
+    padding:12px;
+}
+
+.credits-summary{
+    color:silver;
+}
+
+.credits-summary ul {
+    margin:2px;
+    padding:0;
+    list-style-type: none;
+    vertical-align: baseline;
+    
+    
+}
+.credits-summary ul li,
+.tomato-box .details ul li{
+    /*color:#fff;*/
+    font-weight: 300;
+    
+}
+.credits-summary ul li{
+    /*float: left;*/
+}
+/*.credits-summary ul li:nth-child(2){
+    margin-left:4px;
+}*/
+.credits-summary ul li:nth-child(3){
+    margin-bottom: 12px;
+}
+.credits-summary ul li span,
+.tomato-box .details ul li span,
+.critics-consensus span{
+    font-weight: 400;
+}
+
+.tab{
+    clear: both;
+    box-sizing: border-box;
+    margin-top:0px; /*DONT MESS WITH THIS SHIT*/
+    height:260px; /*DONT MESS WITH THIS SHIT*/
+    overflow: hidden;
+    
+    
+}
+
+
+/*=====================IMDb=====================*/
+
+.tab{
+    /*border: 1px solid #d8d85d;*/
+    /*position: relative;*/
+}
+
+.logo{
+    position: absolute;
+    background-size: contain;
+    height:25px;
+    width:100%;
+    background-repeat: no-repeat;
+    float:right;
+    background-position: right;
+    right: 1%;
+    top:10px;
+    opacity: 0.8;
+    
+}
+.imdb .logo{
+    
+    background-image: url('/assets/img/imdb_white.png');
+}
+
+.rotten-tomatoes .logo{
+    background-image: url('/assets/img/rtlogo.png');
+    height:18px;
+    
+    
+    
+}
+
+
+.imdb-rating,
+.imdb-votes,
+#Production{
+    color:silver;
+    
+}
+
+.imdb-rating span{
+    font-size: 32px;
+    font-weight: 300;
+    
+}
+.imdb-rating #imdbRating{
+    font-family:"Roboto";
+    font-weight:300;
+    font-size:180px;
+    color:#d8d85d;
+    margin-left:15%;
+    
+}
+
+.imdb-votes{
+padding: 0;
+margin-top:-40px;
+float: right;
+margin-right:10%;
+}
+
+#Production{
+    display: block;
+    margin-top:-36px;
+}
+
+/*=====================IMDb=====================*/
+
+
+/*=====================TAMATAR=====================*/
+.rotten-tomatoes{
+    /*border:1px solid white;*/
+    color:silver;
+}
+.rotten-tomatoes h4{
+    padding:0;
+    margin-top: 0px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    color:#eee;
+}
+.rotten-tomatoes ul{
+    list-style-type: none;
+    padding: 0;
+}
+.tomato-box{
+    width:auto;
+    float: left;
+    margin-top:4px;
+    /*margin-left:4px;*/
+}
+
+.tomato-box.meter{
+    /*padding-left: 40px;*/
+    margin-left:10%;
+    min-width:123px;
+}
+
+.tomato-box.audience{
+    margin-left:9%;
+}
+
+
+.tomato-box.meter .details ul li:nth-child(3){
+    float: left;
+}
+.tomato-box.meter .details ul li:nth-child(4)::before{
+    content:" | ";
+}
+
+
+
+.tomato-box h4{
+    text-align: inherit;
+    }
+.tomato-box .rating{
+    font-size: 26px;
+    margin-top:-10%;
+    
+}
+
+.tomato-box .details{
+    margin-top:-20px;
+}
+
+#tomatoMeter,
+#tomatoUserMeter{
+    font-family: "Roboto";
+    font-size: 84px;
+    color:#d8d85d;
+    
+    
+}
+#tomatoUserMeter{
+    color:#dedede;
+}
+
+.critics-consensus{
+    clear: both;
+    font-weight: 300;
+    text-overflow:ellipsis;
+    
+}
+/*=====================TAMATAR=====================*/
+
+
+
+/*=======================SWITCH=======================*/
+.bottom {
+    clear: both;
+    /*
+    background: #d8d85d;
+    padding: 20px 40px;
+    text-decoration: none;
+    color:#404040;*/
+    width:100%;
+    /*max-height:60px;*/
+    /*background-color: indianred;*/
+    
+}
+/*#switch{
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:#404040;
+    background-color: #d8d85d;
+    font-family: "Open Sans";
+    font-size:16px;
+    text-align: center;
+    padding:12px 24px;
+    height:50px;
+    width:200px;
+    border:2 px solid transparent;
+    margin:0 auto;
+    
+}*/
+.abs-menu{
+    position: relative;
+}
+
+.abs-menu div{
+    position: absolute;
+    display: block;
+    height: 24px;
+    width:66px;
+    transition:0.1s all ease-in;
+    opacity: 0.4;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    transition:0.1s all ease-in;
+    
+}
+
+.abs-menu div:hover{
+    cursor:pointer;
+    opacity: 0.6;
+    transition:0.1s all ease-in;
+}
+.abs-menu div.selected{
+    /*left:333;*/
+    opacity: 1;
+    transition:0.1s all ease-in;
+    
+}
+
+
+#imdb-btn{
+    background-image: url('/assets/img/imdb_white.png');
+    top:0;
+    left:330;
+}
+#tomato-btn{
+    background-image: url('/assets/img/rtlogo.png');
+    top:30;
+    left:330;
+}
+/*=======================SWITCH=======================*/
+
+#about-btn{
+    background-image: url('/assets/img/muvilylogo.png');
+    height: 24px;
+    width:66px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top:95%;
+    opacity: 0.8;
+    cursor: pointer;
+     transition:0.1s all ease-in;
+}
+#about-btn:hover{
+    cursor:pointer;
+    opacity: 0.9;
+    transition:0.1s all ease-in;
+}
+.muvilylogo{
+    background-image: url('/assets/img/muvilylogo.png');
+    height:80px;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.about {
+    color: silver;
+    font-size: 12px;
+    padding-left:4px;
+    
+}
+.about p{
+    padding: 12px;
+}
+.about p a,
+.about p a:hover,
+.about p a:active,
+.about p a:visited{
+    color:#fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding:4px;
+    
+}
+
