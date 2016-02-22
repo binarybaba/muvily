@@ -1,8 +1,5 @@
-# muvily
-Chrome extension to get IMDB rating as push notification
 # Muvily for Chrome
-
-Chrome extension that fetches IMDb rating in a push notification.
+Chrome extension to get IMDB rating as push notification
 ### Version
 0.0.0.1
 
