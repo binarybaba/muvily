@@ -1,0 +1,26 @@
+{
+    "name" : "Muvily",
+    "version" : "0.0.0.1",
+    "author": "Amin Mohamed Ajani",
+    "homepage_url": "http://allrightamin.xyz/muvily",
+    "description" : "Check out the IMDb rating before streaming. No new tab. No new window. Zero Hassle.",
+    "background" : { 
+      "scripts":["/assets/js/background.js"]
+      },
+    "icons":{
+        "16":"/assets/img/icon16.png",
+        "48": "/assets/img/icon48.png",
+        "128":"/assets/img/icon128.png"
+    },
+    "browser_action": {
+    "default_icon": "/assets/img/icon48.png",
+    "default_popup": "popup.html"
+    },
+    "permissions" : [
+    "contextMenus",
+    "notifications",
+    "storage"
+    ],
+
+    "manifest_version": 2
+}

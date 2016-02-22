@@ -1,0 +1,131 @@
+<!--
+
+  - This file is a part of Muvily Extension for Google Chrome (http://allrightamin.xyz/muvily)
+ - 
+ - Muvily is free software: you can redistribute it and/or modify it under the terms of 
+ - the MIT License as published by the Free Software Foundation.
+ - 
+ - The MIT License (MIT)
+ - 
+ - Copyright (c) 2016 Amin Mohamed Ajani
+ - 
+ - Permission is hereby granted, free of charge, to any person obtaining a copy
+ - of this software and associated documentation files (the "Software"), to deal
+ - in the Software without restriction, including without limitation the rights
+ - to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ - copies of the Software, and to permit persons to whom the Software is
+ - furnished to do so, subject to the following conditions:
+ - 
+ - The above copyright notice and this permission notice shall be included in all
+ - copies or substantial portions of the Software.
+ - 
+ - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ - IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ - FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ - AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ - LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ - OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   
+-->
+
+   
+<html>
+    <head>
+        <title>Muvily</title>
+        <link rel="stylesheet" href="/assets/styles/landing.css">
+    </head>
+    
+    <body>
+       <div class="movie-wrapper">
+           <div class="top">
+               <div class="title-wrapper">
+                   <span id="Title">You should be highlighting a movie name tho</span> (<span id="Year"></span>) 
+                   <div class="subtext"><span id="Runtime">Can't find the runtime</span> | <span id="Genre">Don't know the genre, dude</span> | <span id="BoxOffice"></span>
+                    <div><span id="Awards"></span></div>
+                   </div>
+               </div>
+               
+               <div class="plot-summary-wrapper">
+                   <div class="plot-summary">
+                    <p id="Plot">I don't have the plot details for this one yet. I also don't have a life. Look at me - I'm a stupid piece of code. They should make a movie on me.</p>
+                   </div>
+                   <div class="credits-summary">
+                       <ul>
+                           <li>Director: <span id="Director">I don't think the director's confirmed yet.</span></li>
+                           <li>Writer: <span id="Writer">I don't think the writer's decided yet</span></li>
+                           <li>Stars: <span id="Actors">I don't think the actors are confirmed yet</span></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+              <div class="abs-menu">
+            <div href="#!" id="imdb-btn" class="selected"></div>
+            <div href="#!" id="tomato-btn"></div>
+        </div>
+              
+               <!--Tab IMDB-->
+            <div class="tab imdb">
+                <div class="imdb-rating">
+                    <span id="imdbRating">0.0</span><span>/10</span>
+                </div>
+                <div class="imdb-votes">
+                   <em><span id="imdbVotes">There are no</span><span> votes</span></em>
+                   
+               </div>
+            </div>
+                <!--Tab Rotten Tomatoes-->
+            <div class="tab rotten-tomatoes">
+                
+                <div class="tomato-box meter">
+                   <h4>Tomato Meter</h4>
+                    <div class="rating">
+                        <span id="tomatoMeter">00</span>%
+                    </div>
+                   <div class="details">
+                       <ul>
+                           <li>Average Rating: <span id="tomatoRating">Nope</span></li>
+                           <li>Reviews Counted: <span id="tomatoReviews">Nope</span></li>
+                           <li>Fresh: <span id="tomatoFresh">Nope</span></li>
+                           <li>Rotten: <span id="tomatoRotten">Nope</span></li>
+                       </ul>
+                   </div>
+               </div>
+                <div class="tomato-box audience">
+                   <h4>Audience Score</h4>
+                   <div class="rating">
+                       <span id="tomatoUserMeter">00</span>%
+                   </div>
+                   <div class="details">
+                       <ul>
+                           <li>Average Rating: <span id="tomatoUserRating">Nope</span></li>
+                           <li>User Ratings: <span id="tomatoUserReviews">Nope</span></li>
+                       </ul>
+                   </div>
+               </div>
+                <div class="critics-consensus">
+                           <p>Critics Consensus: <span id="tomatoConsensus">No critics consensus found here. Maybe you're not searching for the right thing here or maybe I'm going crazy. Either way, no consensus for you sire. Go for a walk instead. Good for the heart.</span></p>
+                       </div>
+           </div>
+            
+       </div>
+       <div class="about">
+           <div class="muvilylogo"></div>
+           <div class="version"><em>v0.0.0.1</em></div>
+            <p>Hi, I'm <a href="http://allrightamin.xyz" target="_blank">Amin Mohamed Ajani</a> and <em>this</em> is jackass. 
+            <br>
+            <br>
+        I made this extension because I was too lazy to check the imdb Rating before deciding to watch a movie or a series or a mini-series or whatever. <br> <br>
+        This extension uses the API created by <a href="mailto:bfritz@fadingsignal.com" target="_blank">Brian Fritz</a> who's super awesome. Hey Brian! <br> 
+        In <em>no</em> way am I or this extension associated with IMDb or Rotten Tomatoes.
+        <br>
+            You are free to use to source code which is available under MIT License at my <a href="https://www.github.com/binarybaba" target="_blank"> github</a>.
+        </p>
+        <p>As always, feedbacks and complaints are welcomed. Hit me up <a href="http://www.twitter.com/AminSpeaks" target="_blank" >@aminspeaks</a>.</p>
+       </div>
+        <div href="#!" id="about-btn"></div>
+        <script src="/assets/js/jquery.js"></script>
+        <script src="/assets/js/popup.js"></script>
+        
+    </body>
+    
+</html>
